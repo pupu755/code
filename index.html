@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bùi Trung Tín - Business Analyst Intern CV</title>
+    
+    <!-- Meta SEO & Open Graph -->
+    <meta name="description" content="Trang CV cá nhân của Bùi Trung Tín - Sinh viên Khoa học máy tính, vị trí Thực tập sinh Phân tích nghiệp vụ (Business Analyst Intern).">
+    <meta name="keywords" content="Bùi Trung Tín, Business Analyst Intern, CV BA, Phân tích nghiệp vụ, Khoa học máy tính, Đại học Đồng Tháp">
+    <meta name="author" content="Bùi Trung Tín">
+    <meta property="og:title" content="Bùi Trung Tín - Business Analyst Intern CV">
+    <meta property="og:description" content="CV cá nhân hiện đại của Bùi Trung Tín - Đang tìm kiếm cơ hội Thực tập Phân tích nghiệp vụ.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & Font Awesome CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS STYLES -->
+    <style>
+        /* === SYSTEM VARIABLES === */
+        :root {
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.35);
+            --secondary: #8b5cf6;
+            --accent: #06b6d4;
+            --bg-body: #090d16;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --bg-card-hover: rgba(30, 41, 59, 0.8);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(59, 130, 246, 0.4);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --shadow-glow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="light"] {
+            --bg-body: #f8fafc;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --bg-card-hover: rgba(255, 255, 255, 0.95);
+            --border-color: rgba(226, 232, 240, 0.8);
+            --border-hover: rgba(37, 99, 235, 0.5);
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --shadow-glow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+        }
+
+        /* === RESET & BASE === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+            padding-bottom: 60px;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        /* === DYNAMIC BACKGROUND BLOBS === */
+        .bg-blobs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.25;
+            animation: float 18s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            width: 450px;
+            height: 450px;
+            background: var(--primary);
+            top: -100px;
+            left: -100px;
+        }
+
+        .blob-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        .blob-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 40px) scale(1.1); }
+            100% { transform: translate(-40px, 80px) scale(0.95); }
+        }
+
+        /* === SCROLL PROGRESS BAR === */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s ease-out;
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        /* === LAYOUT CONTAINER === */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* === FLOATING NAVIGATION TOOLBAR === */
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            z-index: 1000;
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+
+        /* === GLASS CARD COMPONENT === */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 28px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* === SECTION TITLES === */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        /* === 1. HERO / WELCOME SECTION === */
+        .hero-card {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 44px 32px;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-card {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .avatar-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .avatar-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid transparent;
+            background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                        linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .avatar-container:hover .avatar-img {
+            transform: scale(1.04) rotate(2deg);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+            color: #10b981;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #10b981;
+            border-radius: 50%;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .hero-welcome-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 30px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .hero-name {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        [data-theme="light"] .hero-name {
+            background: linear-gradient(135deg, #0f172a 30%, #475569);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-typed-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            min-height: 28px;
+            margin-bottom: 16px;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.1rem;
+            background-color: var(--primary);
+            margin-left: 2px;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .contact-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .contact-pills {
+                justify-content: flex-start;
+            }
+        }
+
+        .pill-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .pill-item:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        /* === CTA ACTION BUTTONS === */
+        .cta-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .cta-group {
+                justify-content: flex-start;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #2563eb);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        /* === 2. TIMELINE (HỌC VẤN & CHỨNG CHỈ) === */
+        .modern-timeline {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .modern-timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary), transparent);
+        }
+
+        .timeline-node {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .timeline-node:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot-glow {
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-body);
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .timeline-time-badge {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .timeline-heading {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .timeline-sub {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+        }
+
+        /* === 3. SKILL BADGES === */
+        .skills-category {
+            margin-bottom: 24px;
+        }
+
+        .skills-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-category-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 12px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Distinct Theme Styling for Skill Groups */
+        .group-lang .skill-badge:hover { border-color: #3b82f6; color: #60a5fa; background: rgba(59, 130, 246, 0.12); }
+        .group-web .skill-badge:hover { border-color: #10b981; color: #34d399; background: rgba(16, 185, 129, 0.12); }
+        .group-db .skill-badge:hover { border-color: #f59e0b; color: #fbbf24; background: rgba(245, 158, 11, 0.12); }
+        .group-design .skill-badge:hover { border-color: #a855f7; color: #c084fc; background: rgba(168, 85, 247, 0.12); }
+
+        /* === 4. PROJECT CARDS === */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .project-card-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .project-card-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .project-period {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--primary);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .project-role-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        /* === FOOTER === */
+        .footer-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* === ANIMATIONS ON SCROLL === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === PRINT STYLESHEET (WINDOW.PRINT) === */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            .bg-blobs, #scroll-progress, .floating-nav, .cta-group, .btn-primary {
+                display: none !important;
+            }
+            .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            .glass-card {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 12px 0 !important;
+                margin-bottom: 12px !important;
+                backdrop-filter: none !important;
+            }
+            .hero-card {
+                margin-top: 0 !important;
+                padding: 0 0 20px 0 !important;
+            }
+            .hero-name {
+                color: #000000 !important;
+                -webkit-text-fill-color: initial !important;
+            }
+            .skill-badge {
+                border: 1px solid #ccc !important;
+                color: #000 !important;
+                background: #f5f5f5 !important;
+            }
+            .project-card-item {
+                border: 1px solid #ddd !important;
+                background: transparent !important;
+            }
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh tiến trình cuộn trang -->
+    <div id="scroll-progress"></div>
+
+    <!-- Hiệu ứng Background blobs phát sáng động -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Thanh điều hướng nổi (Darkmode Toggle) -->
+    <div class="floating-nav">
+        <button class="nav-btn" id="themeToggle" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+            <span id="themeText">Giao diện</span>
+        </button>
+    </div>
+
+    <main class="container">
+
+        <!-- 1. HERO / LỜI CHÀO MỪNG & GIỚI THIỆU -->
+        <header class="glass-card hero-card reveal">
+            <div class="avatar-container">
+                <!-- Thay đường dẫn ảnh đại diện thực tế tại src bên dưới -->
+                <img src="https://via.placeholder.com/150" alt="Bùi Trung Tín" class="avatar-img">
+                <div class="status-badge">
+                    <span class="status-dot"></span> Open to Intern
+                </div>
+            </div>
+
+            <div class="hero-content" style="flex: 1;">
+                <div class="hero-welcome-tag">
+                    <i class="fa-solid fa-hand-wave"></i> Xin chào & Chào mừng bạn đến với CV của tôi
+                </div>
+                <h1 class="hero-name">Bùi Trung Tín</h1>
+                
+                <!-- Dynamic Typing Effect Text -->
+                <div class="hero-typed-title">
+                    <span id="typed-text"></span><span class="typing-cursor"></span>
+                </div>
+
+                <!-- Contact Pills -->
+                <div class="contact-pills">
+                    <span class="pill-item"><i class="fa-solid fa-calendar-days"></i> 15/06/2006</span>
+                    <span class="pill-item"><i class="fa-solid fa-venus-mars"></i> Nam</span>
+                    <span class="pill-item"><i class="fa-solid fa-location-dot"></i> Đồng Tháp</span>
+                    <a href="tel:0961296940" class="pill-item"><i class="fa-solid fa-phone"></i> 0961 296 940</a>
+                    <a href="mailto:btn813@gmail.com" class="pill-item"><i class="fa-solid fa-envelope"></i> btn813@gmail.com</a>
+                </div>
+
+                <!-- Call To Action Buttons -->
+                <div class="cta-group">
+                    <button class="btn-primary" onclick="window.print()">
+                        <i class="fa-solid fa-file-pdf"></i> Tải CV (PDF)
+                    </button>
+                    <a href="mailto:btn813@gmail.com" class="btn-outline">
+                        <i class="fa-solid fa-paper-plane"></i> Liên hệ ngay
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. MỤC TIÊU NGHỀ NGHIỆP -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">
+                <i class="fa-solid fa-bullseye"></i> Mục Tiêu Nghề Nghiệp
+            </h2>
+            <p style="color: var(--text-muted); text-align: justify; font-size: 0.98rem; line-height: 1.8;">
+                Là sinh viên ngành Khoa học máy tính với định hướng phát triển chuyên sâu trong lĩnh vực <strong style="color: var(--text-main);">Phân tích nghiệp vụ (Business Analysis)</strong>. Tôi sở hữu kiến thức nền tảng vững chắc về phân tích yêu cầu, thiết kế cơ sở dữ liệu và truy vấn SQL, mong muốn áp dụng vào thực tế để phân tích nhu cầu người dùng và hỗ trợ xây dựng giải pháp công nghệ tối ưu. Mục tiêu dài hạn của tôi là phát triển các ứng dụng thiết thực phục vụ địa phương, đặc biệt là hệ thống đặt món và giao đồ ăn tại các tỉnh, thành phố như Cao Lãnh.
+            </p>
+        </section>
+
+        <!-- 3. HỌC VẤN -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">
+                <i class="fa-solid fa-graduation-cap"></i> Học Vấn
+            </h2>
+            <div class="modern-timeline">
+                <div class="timeline-node">
+                    <div class="timeline-dot-glow"></div>
+                    <div class="timeline-time-badge">2024 - 2028</div>
+                    <div class="timeline-heading">Đại học Đồng Tháp</div>
+                    <div class="timeline-sub">Chuyên ngành: Khoa học máy tính</div>
+                    <p style="font-size: 0.92rem; color: var(--text-muted);">
+                        <strong style="color: var(--primary);">Môn học trọng tâm:</strong> Cơ sở dữ liệu, Phân tích và thiết kế hệ thống, Kiểm thử phần mềm.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KỸ NĂNG -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">
+                <i class="fa-solid fa-lightbulb"></i> Kỹ Năng & Công Nghệ
+            </h2>
+
+            <!-- Nhóm 1: Ngôn ngữ -->
+            <div class="skills-category group-lang">
+                <div class="skills-category-title"><i class="fa-solid fa-code"></i> Ngôn ngữ lập trình & Scripting</div>
+                <div class="badge-container">
+                    <div class="skill-badge"><i class="fa-solid fa-terminal" style="color: #3b82f6;"></i> Apache Groovy</div>
+                    <div class="skill-badge"><i class="fa-brands fa-microsoft" style="color: #60a5fa;"></i> C#</div>
+                    <div class="skill-badge"><i class="fa-solid fa-code" style="color: #3b82f6;"></i> C++</div>
+                    <div class="skill-badge"><i class="fa-solid fa-code" style="color: #93c5fd;"></i> C</div>
+                    <div class="skill-badge"><i class="fa-solid fa-server" style="color: #a855f7;"></i> Elixir</div>
+                    <div class="skill-badge"><i class="fa-brands fa-java" style="color: #f97316;"></i> Java</div>
+                    <div class="skill-badge"><i class="fa-brands fa-js" style="color: #facc15;"></i> JavaScript</div>
+                    <div class="skill-badge"><i class="fa-solid fa-square-code" style="color: #a855f7;"></i> Julia</div>
+                    <div class="skill-badge"><i class="fa-brands fa-python" style="color: #38bdf8;"></i> Python</div>
+                </div>
+            </div>
+
+            <!-- Nhóm 2: Web & Frontend -->
+            <div class="skills-category group-web">
+                <div class="skills-category-title"><i class="fa-solid fa-laptop-code"></i> Web & Frontend</div>
+                <div class="badge-container">
+                    <div class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #38bdf8;"></i> CSS3</div>
+                    <div class="skill-badge"><i class="fa-brands fa-html5" style="color: #f97316;"></i> HTML5</div>
+                    <div class="skill-badge"><i class="fa-brands fa-angular" style="color: #ef4444;"></i> Angular.js</div>
+                    <div class="skill-badge"><i class="fa-solid fa-palette" style="color: #10b981;"></i> Ant Design</div>
+                    <div class="skill-badge"><i class="fa-solid fa-sliders" style="color: #6366f1;"></i> AdminJS</div>
+                    <div class="skill-badge"><i class="fa-brands fa-bootstrap" style="color: #8b5cf6;"></i> Bootstrap</div>
+                </div>
+            </div>
+
+            <!-- Nhóm 3: Cơ sở dữ liệu -->
+            <div class="skills-category group-db">
+                <div class="skills-category-title"><i class="fa-solid fa-database"></i> Cơ sở dữ liệu & Framework</div>
+                <div class="badge-container">
+                    <div class="skill-badge"><i class="fa-solid fa-database" style="color: #f59e0b;"></i> MySQL</div>
+                    <div class="skill-badge"><i class="fa-solid fa-layer-group" style="color: #582be8;"></i> .NET</div>
+                </div>
+            </div>
+
+            <!-- Nhóm 4: Thiết kế -->
+            <div class="skills-category group-design">
+                <div class="skills-category-title"><i class="fa-solid fa-pen-ruler"></i> Thiết kế & Đồ họa (UI/UX)</div>
+                <div class="badge-container">
+                    <div class="skill-badge"><i class="fa-solid fa-file-pdf" style="color: #ec4899;"></i> Adobe InDesign</div>
+                    <div class="skill-badge"><i class="fa-solid fa-pen-nib" style="color: #06b6d4;"></i> Canva</div>
+                    <div class="skill-badge"><i class="fa-solid fa-cube" style="color: #f97316;"></i> Blender</div>
+                    <div class="skill-badge"><i class="fa-solid fa-vector-square" style="color: #d946ef;"></i> Adobe XD</div>
+                    <div class="skill-badge"><i class="fa-solid fa-mobile-screen" style="color: #3b82f6;"></i> Proto.io</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CHỨNG CHỈ -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">
+                <i class="fa-solid fa-certificate"></i> Chứng Chỉ
+            </h2>
+            <div class="modern-timeline">
+                <div class="timeline-node">
+                    <div class="timeline-dot-glow"></div>
+                    <div class="timeline-time-badge">2026</div>
+                    <div class="timeline-heading">Chứng chỉ Tiếng Anh B1</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. DỰ ÁN NỔI BẬT -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">
+                <i class="fa-solid fa-diagram-project"></i> Dự Án Nổi Bật
+            </h2>
+
+            <div class="project-grid">
+                <!-- Dự án 1 -->
+                <div class="project-card-item">
+                    <div class="project-top">
+                        <div class="project-title">Hệ chuyên gia tư vấn Build PC</div>
+                        <div class="project-period">2025 - 2026</div>
+                    </div>
+                    <div class="project-role-tag">
+                        <i class="fa-solid fa-user-tie"></i> Trưởng nhóm / Phân tích yêu cầu & Xây dựng hệ chuyên gia
+                    </div>
+                    <p class="project-description">
+                        Thu thập tri thức chuyên gia về linh kiện máy tính, xây dựng tập luật và bộ suy diễn cho các cấu hình PC theo nhu cầu sử dụng (văn phòng, gaming, đồ họa, AI...) và ngân sách. Phân công công việc nhóm, tham gia lập trình hệ thống bằng Java trên NetBeans.
+                    </p>
+                </div>
+
+                <!-- Dự án 2 -->
+                <div class="project-card-item">
+                    <div class="project-top">
+                        <div class="project-title">Hệ thống Quản lý Thư viện (4T Smart Library)</div>
+                        <div class="project-period">2025 - 2026</div>
+                    </div>
+                    <div class="project-role-tag">
+                        <i class="fa-solid fa-user-tie"></i> Trưởng nhóm / Phân tích & Phát triển hệ thống
+                    </div>
+                    <p class="project-description">
+                        Đặc tả nghiệp vụ hệ thống quản lý thư viện, thiết kế cơ sở dữ liệu (sơ đồ ERD) và các quy trình mượn/trả sách. Phát triển ứng dụng desktop bằng C#, Windows Forms, SQL Server và ADO.NET, quản lý tiến độ nhóm.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FOOTER -->
+        <footer class="glass-card footer-content reveal">
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Cảm ơn bạn đã dành thời gian xem CV của tôi!
+            </p>
+            <button class="btn-primary" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> In / Xuất file PDF
+            </button>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">
+                © 2026 Bùi Trung Tín. Designed for GitHub Pages.
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JAVASCRIPT INLINE -->
+    <script>
+        // === 1. TYPING ANIMATION EFFECT FOR HERO SECTION ===
+        const typedTextSpan = document.getElementById('typed-text');
+        const textArray = [
+            "Business Analyst Intern",
+            "Sinh viên Khoa học máy tính",
+            "Định hướng Phân tích Nghiệp vụ"
+        ];
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 80);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 40);
+            } else {
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, 500);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (textArray.length) setTimeout(type, 500);
+        });
+
+        // === 2. SCROLL PROGRESS INDICATOR ===
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+        });
+
+        // === 3. DARK / LIGHT THEME TOGGLE & LOCAL STORAGE ===
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+
+        const savedTheme = localStorage.getItem('cv_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeUI(savedTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('cv_theme', newTheme);
+            updateThemeUI(newTheme);
+        });
+
+        function updateThemeUI(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fa-solid fa-sun';
+                themeText.textContent = 'Giao diện Sáng';
+            } else {
+                themeIcon.className = 'fa-solid fa-moon';
+                themeText.textContent = 'Giao diện Tối';
+            }
+        }
+
+        // === 4. REVEAL ANIMATION ON SCROLL (INTERSECTION OBSERVER) ===
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
